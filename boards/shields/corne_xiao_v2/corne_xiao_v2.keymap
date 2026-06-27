@@ -13,22 +13,22 @@
 
         config_layer_switch_1 {
           timeout-ms = <50>;
-          key-positions = <21 22>;
+          key-positions = <39 40>;
           bindings = <&mo 3>;
         };
         config_layer_switch_2 {
           timeout-ms = <50>;
-          key-positions = <42 43>;
+          key-positions = <41 42>;
           bindings = <&mo 3>;
         };
         config_layer_switch_3 {
           timeout-ms = <50>;
-          key-positions = <21 43>;
+          key-positions = <39 41>;
           bindings = <&mo 3>;
         };
         config_layer_switch_4 {
           timeout-ms = <50>;
-          key-positions = <42 22>;
+          key-positions = <40 42>;
           bindings = <&mo 3>;
         };
     };
