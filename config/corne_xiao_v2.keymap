@@ -123,8 +123,8 @@
 // | SHFT | F1  | F2  | F3  | F4  | F5  |  boot  |  |        |  F6 | F7  | F8  | F9  | F10 |  F11 |
 //                    | GUI | LWR | RSE SPC |                    | RSE ENT | LWR  | ALT |
             bindings = <
-&trans    &trans       &trans       &trans       &trans       &kp LS(LC(TAB))                         &kp LC(TAB)   &trans   &trans &trans    &trans &trans 
-&trans     &trans       &trans       &trans       &trans       &trans                         &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans  &kp F12
+&trans    &trans       &trans       &kp HOME       &kp END       &kp LS(LC(TAB))                         &kp LC(TAB)   &kp PAGE_DOWN   &kp PAGE_UP &trans    &trans &trans 
+&trans     &trans       &trans       &kp C_MUTE       &kp C_VOL_DN       &kp C_VOL_UP                         &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans  &kp F12
 &trans  &kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &none &bootloader &kp F6   &kp F7   &kp F8 &kp F9    &kp F10 &kp F11
                                      &trans       &trans       &trans                         &trans   &trans    &trans 
             >;
