@@ -4,11 +4,9 @@ on:
   workflow_dispatch: # can be triggered manually
   push: # automatically run on changes to following paths
     paths:
-      - "boards/shields/corne_xiao_v2/*.keymap"
-      - "boards/shields/corne_xiao_v2/*.dtsi"
       - "dts/layouts/corne_xiao/*.dtsi"
-      - "keymap_drawer.config.yaml"
-      # - 'boards/*/*/*.keymap'
+      - "config/*.conf"
+      - "config/*.keymap"
 
 jobs:
   draw:
