@@ -31,6 +31,64 @@
           key-positions = <40 42>;
           bindings = <&mo 3>;
         };
+        open_parentheses {
+          timeout-ms = <50>;
+          bindings = <&kp LPAR>;
+          key-positions = <4 5>;
+        };
+        close_parentheses {
+          timeout-ms = <50>;
+          bindings = <&kp RPAR>;
+          key-positions = <6 7>;
+        };
+        open_square {
+          timeout-ms = <50>;
+          bindings = <&kp LBKT>;
+          key-positions = <16 17>;
+        };
+        close_square {
+          timeout-ms = <50>;
+          bindings = <&kp RBKT>;
+          key-positions = <18 19>;
+        };
+        open_curly {
+          timeout-ms = <50>;
+          bindings = <&kp LBRC>;
+          key-positions = <28 29>;
+        };
+        close_curly {
+          timeout-ms = <50>;
+          bindings = <&kp RBRC>;
+          key-positions = <32 33>;
+        };
+        escape {
+          timeout-ms = <50>;
+          bindings = <&kp ESC>;
+          key-positions = <19 20>;
+        };
+        
+        tilde {
+          timeout-ms = <50>;
+          bindings = <&kp TILDE>;
+          key-positions = <21 22>;
+        };
+
+        grave {
+          timeout-ms = <50>;
+          bindings = <&kp GRAVE>;
+          key-positions = <22 23>;
+        };
+
+        backslash {
+          timeout-ms = <50>;
+          bindings = <&kp BSLH>;
+          key-positions = <35 36>;
+        };
+        pipe {
+          timeout-ms = <50>;
+          bindings = <&kp PIPE>;
+          key-positions = <36 37>;
+        };
     };
 };
 
