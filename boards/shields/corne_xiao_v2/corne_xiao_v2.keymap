@@ -114,7 +114,7 @@
         };
 
         lower_layer {
-            display-name = "lower";
+            display-name = "Nav";
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
 
 // ------------------------------------------------------------------------------------------------
@@ -123,7 +123,7 @@
 // | SHFT | F1  | F2  | F3  | F4  | F5  |  boot  |  |        |  F6 | F7  | F8  | F9  | F10 |  F11 |
 //                    | GUI | LWR | RSE SPC |                    | RSE ENT | LWR  | ALT |
             bindings = <
-&trans    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5                         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0  &kp BSPC
+&trans    &trans       &trans       &trans       &trans       &kp LS(LC(TAB))                         &kp LC(TAB)   &trans   &trans &trans    &trans &trans 
 &trans     &trans       &trans       &trans       &trans       &trans                         &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans  &kp F12
 &trans  &kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &none &bootloader &kp F6   &kp F7   &kp F8 &kp F9    &kp F10 &kp F11
                                      &trans       &trans       &trans                         &trans   &trans    &trans 
@@ -131,24 +131,24 @@
         };
 
         raise_layer {
-            display-name = "raise";
+            display-name = "Num";
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
 
 // ------------------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |                    |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |                    |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |        |  |  boot  |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI | LWR | RSE SPC |                    | RSE ENT | LWR  | ALT |
+// |    |    |  )  |  (  |  *  |  &  |                    |  7  |  8  |  9  |  0  |    |    |
+// |    |    |  _  |  ^  |  %  |  $  |                    |  4  |  5  |  6  |  -  |    |    |
+// |    |    |  +  |  #  |  @  |  !  |        |  |  boot  |  1  |  2  |  3  |  =  |    |    |
+//                 |     |     |     |                    |     |     |     |
             bindings = <
-&trans   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT                   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-&trans &trans   &trans &trans   &trans   &trans                      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-&trans &trans   &trans &trans   &trans   &trans    &none &bootloader &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
+&trans &trans   &kp RPAR &kp LPAR   &kp KP_MULTIPLY   &kp AMPS                      &kp N7 &kp N8 &kp N9 &kp N0    &trans &trans
+&trans &trans   &kp UNDER &kp CARET   &kp PRCNT   &kp DLLR                      &kp N4 &kp N5 &kp N6 &kp MINUS &trans &trans
+&trans &trans   &kp PLUS &kp HASH   &kp AT   &kp EXCL    &none &bootloader &kp N1 &kp N2 &kp N3 &kp EQUAL &trans &trans
                                      &trans       &trans       &trans                         &trans   &trans    &trans 
             >;
         };
 
         config_layer {
-            display-name = "Config Layer";
+            display-name = "Config";
 // ------------------------------------------------------------------------------------------------
 // |      |     |     |     |     |     |                    |     |     |     |     |     |      |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |                    | boot|     |     |     |     |      |
