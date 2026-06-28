@@ -10,85 +10,6 @@
             key-positions = <0 1>;
             bindings = <&studio_unlock>;
         };
-
-        config_layer_switch_1 {
-          timeout-ms = <50>;
-          key-positions = <39 40>;
-          bindings = <&mo 3>;
-        };
-        config_layer_switch_2 {
-          timeout-ms = <50>;
-          key-positions = <41 42>;
-          bindings = <&mo 3>;
-        };
-        config_layer_switch_3 {
-          timeout-ms = <50>;
-          key-positions = <39 41>;
-          bindings = <&mo 3>;
-        };
-        config_layer_switch_4 {
-          timeout-ms = <50>;
-          key-positions = <40 42>;
-          bindings = <&mo 3>;
-        };
-        open_parentheses {
-          timeout-ms = <50>;
-          bindings = <&kp LPAR>;
-          key-positions = <4 5>;
-        };
-        close_parentheses {
-          timeout-ms = <50>;
-          bindings = <&kp RPAR>;
-          key-positions = <6 7>;
-        };
-        open_square {
-          timeout-ms = <50>;
-          bindings = <&kp LBKT>;
-          key-positions = <16 17>;
-        };
-        close_square {
-          timeout-ms = <50>;
-          bindings = <&kp RBKT>;
-          key-positions = <18 19>;
-        };
-        open_curly {
-          timeout-ms = <50>;
-          bindings = <&kp LBRC>;
-          key-positions = <28 29>;
-        };
-        close_curly {
-          timeout-ms = <50>;
-          bindings = <&kp RBRC>;
-          key-positions = <32 33>;
-        };
-        escape {
-          timeout-ms = <50>;
-          bindings = <&kp ESC>;
-          key-positions = <19 20>;
-        };
-        
-        tilde {
-          timeout-ms = <50>;
-          bindings = <&kp TILDE>;
-          key-positions = <21 22>;
-        };
-
-        grave {
-          timeout-ms = <50>;
-          bindings = <&kp GRAVE>;
-          key-positions = <22 23>;
-        };
-
-        backslash {
-          timeout-ms = <50>;
-          bindings = <&kp BSLH>;
-          key-positions = <35 36>;
-        };
-        pipe {
-          timeout-ms = <50>;
-          bindings = <&kp PIPE>;
-          key-positions = <36 37>;
-        };
     };
 };
 
@@ -104,62 +25,52 @@
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |                    |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |                    |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |  MUTE  |  |        |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | RSE SPC |                    | RSE ENT | LWR  | ALT |
+//                    | GUI | LWR | SPC |                    | ENT | RSE  | ALT |
             bindings = <
-&kp ESC   &kp Q &kp W &kp E    &kp R &kp T                      &kp Y   &kp U &kp I     &kp O   &kp P    &kp BSPC
-&mt LCTRL TAB &kp A &kp S &kp D    &kp F &kp G                      &kp H   &kp J &kp K     &kp L   &kp SEMI &kp SQT
+&kp TAB   &kp Q &kp W &kp E    &kp R &kp T                      &kp Y   &kp U &kp I     &kp O   &kp P    &kp BSPC
+&kp LCTRL &kp A &kp S &kp D    &kp F &kp G                      &kp H   &kp J &kp K     &kp L   &kp SEMI &kp SQT
 &kp LSHFT &kp Z &kp X &kp C    &kp V &kp B     &none &kp C_MUTE &kp N   &kp M &kp COMMA &kp DOT &kp FSLH &kp ESC
-                      &kp LGUI &mo 1 &lt 2 SPACE                  &lt 2 RET &mo 1 &kp LALT
+                      &kp LGUI &mo 1 &kp SPACE                  &kp RET &mo 2 &kp LALT
             >;
         };
 
         lower_layer {
-            display-name = "Nav";
+            display-name = "lower";
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
 
 // ------------------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |                    |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |                    | LFT | DWN |  UP | RGT |     |  F12 |
 // | SHFT | F1  | F2  | F3  | F4  | F5  |  boot  |  |        |  F6 | F7  | F8  | F9  | F10 |  F11 |
-//                    | GUI | LWR | RSE SPC |                    | RSE ENT | LWR  | ALT |
+//                    | GUI |     | SPC |                    | ENT |     | ALT |
             bindings = <
-&trans    &trans       &trans       &trans       &trans       &kp LS(LC(TAB))                         &kp LC(TAB)   &trans   &trans &trans    &trans &trans 
-&trans     &trans       &trans       &trans       &trans       &trans                         &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans  &kp F12
-&trans  &kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &none &bootloader &kp F6   &kp F7   &kp F8 &kp F9    &kp F10 &kp F11
-                                     &trans       &trans       &trans                         &trans   &trans    &trans 
+&kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5                         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0  &kp BSPC
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans  &kp F12
+&kp LSHFT  &kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &none &bootloader &kp F6   &kp F7   &kp F8 &kp F9    &kp F10 &kp F11
+                                     &kp LGUI     &trans       &kp SPACE                      &kp RET  &trans   &kp LALT
             >;
         };
 
         raise_layer {
-            display-name = "Num";
+            display-name = "raise";
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
 
 // ------------------------------------------------------------------------------------------------
-// |    |    |  )  |  (  |  *  |  &  |                    |  7  |  8  |  9  |  0  |    |    |
-// |    |    |  _  |  ^  |  %  |  $  |                    |  4  |  5  |  6  |  -  |    |    |
-// |    |    |  +  |  #  |  @  |  !  |        |  |  boot  |  1  |  2  |  3  |  =  |    |    |
-//                 |     |     |     |                    |     |     |     |
+// |  TAB |  !  |  @  |  #  |  $  |  %  |                    |  ^  |  &  |  *  |  (  |  )  | BKSP |
+// | CTRL |     |     |     |     |     |                    |  -  |  =  |  [  |  ]  |  \  |  `   |
+// | SHFT |     |     |     |     |     |        |  |  boot  |  _  |  +  |  {  |  }  | "|" |  ~   |
+//                    | GUI |     | SPC |                    | ENT |     | ALT |
             bindings = <
-&trans &trans   &kp RPAR &kp LPAR   &kp KP_MULTIPLY   &kp AMPS                      &kp N7 &kp N8 &kp N9 &kp N0    &trans &trans
-&trans &trans   &kp UNDER &kp CARET   &kp PRCNT   &kp DLLR                      &kp N4 &kp N5 &kp N6 &kp MINUS &trans &trans
-&trans &trans   &kp PLUS &kp HASH   &kp AT   &kp EXCL    &none &bootloader &kp N1 &kp N2 &kp N3 &kp EQUAL &trans &trans
-                                     &trans       &trans       &trans                         &trans   &trans    &trans 
+&kp TAB   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT                   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
+&kp LCTRL &trans   &trans &trans   &trans   &trans                      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
+&kp LSHFT &trans   &trans &trans   &trans   &trans    &none &bootloader &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
+                          &kp LGUI &trans   &kp SPACE                   &kp RET   &trans    &kp LALT
             >;
         };
 
-        config_layer {
-            display-name = "Config";
-// ------------------------------------------------------------------------------------------------
-// |      |     |     |     |     |     |                    |     |     |     |     |     |      |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |                    | boot|     |     |     |     |      |
-// |      |     |     |     |     |     |                    |     |     |     |     |     |      |
-//                    | GUI | LWR | RSE SPC |                    | RSE ENT | LWR  | ALT |
-            bindings = <
-&trans     &trans       &trans       &trans       &sys_reset   &bootloader                    &bootloader     &sys_reset    &trans &trans   &trans  &trans 
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                   &trans   &trans &trans &trans   &trans  &trans
-&trans     &trans       &trans       &trans       &trans       &trans   &none &none           &trans   &trans &trans &trans   &trans  &trans 
-                                     &trans       &trans       &trans                         &trans   &trans &trans 
-            >;
+        extra1 {
+            display-name = "extra1";
+            status = "reserved";
         };
 
         extra2 {
