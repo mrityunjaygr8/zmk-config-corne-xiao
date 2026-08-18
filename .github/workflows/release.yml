@@ -3,8 +3,25 @@ name: Release
 on:
   push:
     tags:
-      - "[0-9]+.[0-9]+.[0-9]+"
+      - "**"
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config-release.yml@v0.3
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
+
+  publish:
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      contents: write
+    steps:
+      - name: Download firmware
+        uses: actions/download-artifact@v4
+        with:
+          name: firmware
+          path: firmware
+
+      - name: Publish to GitHub Releases
+        uses: softprops/action-gh-release@v2
+        with:
+          files: firmware/**
