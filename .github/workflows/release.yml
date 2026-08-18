@@ -1,0 +1,10 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "[0-9]+.[0-9]+.[0-9]+"
+
+jobs:
+  build:
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config-release.yml@v0.3
