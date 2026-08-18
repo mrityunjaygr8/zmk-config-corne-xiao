@@ -1,13 +1,28 @@
 name: Build ZMK Config
 on:
   workflow_dispatch: # can be triggered manually
-  push: # automatically run on changes to following paths
-    paths:
-      - "dts/layouts/corne_xiao/*.dtsi"
-      - "config/*.conf"
-      - "config/*.keymap"
+  push:
+    tags:
+      - "**"
 
 jobs:
   build:
-    if: ${{ !startsWith(github.ref, 'refs/tags/') }}
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
+
+  publish:
+    runs-on: ubuntu-latest
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/')
+    permissions:
+      contents: write
+    steps:
+      - name: Download firmware
+        uses: actions/download-artifact@v4
+        with:
+          name: firmware
+          path: firmware
+
+      - name: Publish to GitHub Releases
+        uses: softprops/action-gh-release@v2
+        with:
+          files: firmware/**
